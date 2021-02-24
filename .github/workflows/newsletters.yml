@@ -1,0 +1,26 @@
+name: Newsletter
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+
+      - name: Setup python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+          architecture: "x64"
+
+      - name: Install dependencies
+        run: pip install -r requirements.pip
+
+      - name: Run scheduled task
+        env:
+          MG_MAILING_LIST: ${{ secrets.MAILING_LIST }}
+          MG_API_KEY: ${{ secrets.API_KEY }}
+          TEMPLATE_NAME: ${{ secrets.TEMPLATE_NAME }}
+        run: python send_emails.py
