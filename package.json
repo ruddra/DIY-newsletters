@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "prestart": "if [ ! -d node_modules ]; then npm install; fi",
+        "postinstall": "netlify-lambda install",
+        "build": "netlify-lambda build .",
+        "serve": "netlify-lambda serve .",
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "mailgun-js": "^0.22.0",
+        "netlify-lambda": "^2.0.3",
+        "serverless-http": "^2.7.0"
+    }
+}
