@@ -16,5 +16,10 @@ To make the script for CronJob to work, you need to add three variables in the S
 
 ![](actions_secret.jpg)
 
+## More Information
 
-## License: MIT
+Feel free to read this article where I explained the steps to create this application: https://ruddra.com/fix-python-after-brew-upgrade/.
+
+## License
+
+MIT :smile:.
