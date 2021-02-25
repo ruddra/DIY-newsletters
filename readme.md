@@ -1,4 +1,4 @@
-# Serverless Newsletter Service using Netlify
+# Serverless Newsletter Service using Netlify and GitHub Actions
 
 [![Deploy to
 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ruddra/serverless-actions-newsletters)
