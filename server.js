@@ -11,14 +11,12 @@ const mailgun = require('mailgun-js')({ apiKey: API_KEY, domain: DOMAIN })
 
 const list = mailgun.lists(`${MAILING_LIST}@${DOMAIN}`);
 
-const template = {
-  subscribed: true,
-}
-
 router.post('/', (req, res) => {
+  let { name, address } = req.body
   let user = {
-    ...template,
-    ...req.body
+    subscribed: true,
+    name: name,
+    address: address
   }
   list.members().create(user, function (error, data) {
     res.json({
