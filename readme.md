@@ -18,7 +18,7 @@ To make the script for CronJob to work, you need to add three variables in the S
 
 ## More Information
 
-Feel free to read this article where I explained the steps to create this application: https://ruddra.com/fix-python-after-brew-upgrade/.
+Feel free to read this article where I explained the steps to create this application: https://ruddra.com/fix-python-after-brew-upgrade/ :sparkle:.
 
 ## License
 
