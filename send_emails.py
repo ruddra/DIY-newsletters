@@ -2,14 +2,14 @@ import os
 import json
 import requests
 
-TO_MAIL_LIST = os.environ.get('MAILING_LIST')
+TO_MAIL_LIST = os.environ.get('MAILING_LIST')  # <mailing_list_name>@<DOMAIN>
 API_KEY = os.environ.get('API_KEY')
 TEMPLATE_NAME = os.environ.get('TEMPLATE_NAME')
 
 
 def send_email(title, data):
     x = {"from": "Newsletter",
-         "to": TO_MAIL_LIST,
+         "to": TO_MAIL_LIST,  # <mailing_list_name>@<DOMAIN>
          "subject": title,
          "template": TEMPLATE_NAME,
          "h:X-Mailgun-Variables": json.dumps(data)}
